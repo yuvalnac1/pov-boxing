@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>POV Boxing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <script type="module" crossorigin src="./assets/tracking-CFsVOkN7.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/calibration-BY8MdFYG.js">
+  <link rel="stylesheet" crossorigin href="./assets/tracking-8-pRkNUI.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>POV <span>BOXING</span></h1>
+    <div class="subtitle">Milestone 1 · Tracking test</div>
+    <div class="topbar-actions">
+      <button id="btn-recal" class="ghost" hidden>Recalibrate</button>
+      <button id="btn-debug" class="ghost" hidden>Debug (D)</button>
+    </div>
+  </header>
+
+  <main class="stage">
+    <aside class="hand-panel" id="panel-L">
+      <h2>LEFT</h2>
+      <div class="meter"><label>Punch</label><div class="bar"><i class="fill"></i><b class="mark"></b></div></div>
+      <div class="meter"><label>Open hand</label><div class="bar"><i class="fill"></i><b class="mark"></b></div></div>
+      <div class="presence">no hand</div>
+    </aside>
+
+    <div class="view">
+      <canvas id="cam" width="640" height="480"></canvas>
+      <video id="video" playsinline muted></video>
+      <div id="guard-badge" class="guard-badge">🛡 GUARD</div>
+      <div id="flash" class="flash"></div>
+      <div id="hands-lost" class="hands-lost" hidden>✋ Show both hands to the camera</div>
+      <pre id="debug" class="debug" hidden></pre>
+    </div>
+
+    <aside class="hand-panel" id="panel-R">
+      <h2>RIGHT</h2>
+      <div class="meter"><label>Punch</label><div class="bar"><i class="fill"></i><b class="mark"></b></div></div>
+      <div class="meter"><label>Open hand</label><div class="bar"><i class="fill"></i><b class="mark"></b></div></div>
+      <div class="presence">no hand</div>
+    </aside>
+  </main>
+
+  <footer class="counters" id="counters" hidden>
+    <div><b id="c-STRAIGHT_L">0</b>Left straight</div>
+    <div><b id="c-STRAIGHT_R">0</b>Right straight</div>
+    <div><b id="c-BODY">0</b>Body shots</div>
+    <div><b id="c-PALM_L">0</b>Left parry</div>
+    <div><b id="c-PALM_R">0</b>Right parry</div>
+    <div><b id="c-GUARD">0</b>Guard</div>
+    <div><b id="c-DODGE">0</b>Leans</div>
+    <div class="lean-box"><div class="lean-pad"><i id="lean-dot"></i></div><small id="lean-text">—</small><button id="btn-neutral" class="ghost small">Set stance</button></div>
+    <button id="btn-reset" class="ghost small">Reset</button>
+  </footer>
+
+  <!-- Full-screen overlay used for start, loading, calibration and errors -->
+  <section id="overlay" class="overlay">
+    <div class="card">
+      <div id="ov-icon" class="ov-icon">🥊</div>
+      <h2 id="ov-title">POV BOXING</h2>
+      <p id="ov-text">Your hands are the controller. Stand about an arm's length from the camera, in a well-lit room.</p>
+      <div id="ov-progress" class="progress" hidden><i></i></div>
+      <div id="ov-hands" class="ov-hands" hidden><span id="ov-L">LEFT</span><span id="ov-R">RIGHT</span></div>
+      <button id="btn-start">Start camera</button>
+    </div>
+  </section>
+
+</body>
+</html>

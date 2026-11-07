@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "assets": {
+    "shot-comic-rusty": {
+      "name": "Comic look \u2014 Fight 1 Rusty Vega",
+      "path": "screenshots/comic/fight1-rusty.jpg",
+      "description": "In-game screenshot of the comic-book fighter style for review (not a production asset)."
+    },
+    "shot-comic-twostep": {
+      "name": "Comic look \u2014 Fight 2 Two-Step",
+      "path": "screenshots/comic/fight2-two-step.jpg",
+      "description": "In-game screenshot of the comic-book fighter style for review (not a production asset)."
+    },
+    "shot-comic-wall": {
+      "name": "Comic look \u2014 Fight 3 The Wall",
+      "path": "screenshots/comic/fight3-the-wall.jpg",
+      "description": "In-game screenshot of the comic-book fighter style for review (not a production asset)."
+    },
+    "shot-comic-toro": {
+      "name": "Comic look \u2014 Fight 4 El Toro (attacking face)",
+      "path": "screenshots/comic/fight4-el-toro-attacking.jpg",
+      "description": "In-game screenshot of the comic-book fighter style for review (not a production asset)."
+    },
+    "shot-comic-king": {
+      "name": "Comic look \u2014 Fight 5 King",
+      "path": "screenshots/comic/fight5-king.jpg",
+      "description": "In-game screenshot of the comic-book fighter style for review (not a production asset)."
+    },
+    "shot-game-fight": {
+      "name": "Gameplay \u2014 first-person fight vs El Toro (punch lands)",
+      "path": "screenshots/comic/game-fight-punch.jpg",
+      "description": "In-game screenshot for review (not a production asset)."
+    },
+    "shot-game-intro": {
+      "name": "Gameplay \u2014 pre-fight VS screen",
+      "path": "screenshots/comic/game-intro-vs.jpg",
+      "description": "In-game screenshot for review (not a production asset)."
+    },
+    "shot-game-ladder": {
+      "name": "Gameplay \u2014 Road to the Title ladder",
+      "path": "screenshots/comic/game-ladder.jpg",
+      "description": "In-game screenshot for review (not a production asset)."
+    },
+    "shot-arena3": {
+      "name": "Arena 3 \u2014 new Regional gym (shirtless The Wall)",
+      "path": "screenshots/comic/arena3-regional-gym.jpg",
+      "description": "In-game screenshot for review (not a production asset)."
+    },
+    "shot-intro-red": {
+      "name": "Fight intro \u2014 red corner introduction",
+      "path": "screenshots/comic/intro-red-corner.jpg",
+      "description": "In-game screenshot for review (not a production asset)."
+    },
+    "shot-intro-faceoff": {
+      "name": "Fight intro \u2014 face-off and VS panel",
+      "path": "screenshots/comic/intro-faceoff.jpg",
+      "description": "In-game screenshot for review (not a production asset)."
+    }
+  }
+}

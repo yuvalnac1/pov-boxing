@@ -1,0 +1,186 @@
+{
+  "version": 1,
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "nodes": [
+    {
+      "id": "portrait-rusty",
+      "type": "image",
+      "title": "Headshot \u2014 Fight 1 \"Rusty\" Vega",
+      "description": "Production asset: career-ladder headshot for fight 1 (public/portraits/rusty.png).",
+      "data": {
+        "prompt": "Out-of-shape veteran boxer in his fifties: bald head, light grey stubble, fair peachy skin, heavy jowls, thick neck, small scar over one eyebrow, tired but dangerous eyes, navy blue boxing gloves with gold trim. Background: dim warm basement gym, red brick wall, single hanging light bulb glow. Comic-book style digital painting for a boxing video game fight poster: bold black ink outlines, cel shading, saturated colors, dramatic red rim light from the left and blue rim light from the right, subtle halftone dots. Head-and-shoulders headshot, face centered in a wide 16:9 frame with empty space on both sides, looking straight at the viewer with an intense, serious fighter's stare-down, chin slightly lowered, gloves raised near the chin. Fictional original character. No text, no logos, no watermark.",
+        "presetId": "portrait",
+        "resolution": "1K",
+        "aspectRatio": "16:9",
+        "images": []
+      }
+    },
+    {
+      "id": "portrait-twostep",
+      "type": "image",
+      "title": "Headshot \u2014 Fight 2 Danny \"Two-Step\" Okafor",
+      "description": "Production asset: career-ladder headshot for fight 2 (public/portraits/twostep.png).",
+      "data": {
+        "prompt": "Speedy young amateur boxer in his early twenties: dark brown skin, short black twists, small black goatee, lean athletic build, sharp focused eyes, bright green boxing gloves with white trim, green tank top. Background: suburban boxing club, pale brick wall, warm string lights bokeh. Comic-book style digital painting for a boxing video game fight poster: bold black ink outlines, cel shading, saturated colors, dramatic red rim light from the left and blue rim light from the right, subtle halftone dots. Head-and-shoulders headshot, face centered in a wide 16:9 frame with empty space on both sides, looking straight at the viewer with an intense, serious fighter's stare-down, chin slightly lowered, gloves raised near the chin. Fictional original character. No text, no logos, no watermark.",
+        "presetId": "portrait",
+        "resolution": "1K",
+        "aspectRatio": "16:9",
+        "images": []
+      }
+    },
+    {
+      "id": "portrait-wall",
+      "type": "image",
+      "title": "Headshot \u2014 Fight 3 Ivan \"The Wall\" Petrov",
+      "description": "Production asset: career-ladder headshot for fight 3 (public/portraits/wall.png).",
+      "data": {
+        "prompt": "Huge heavyweight boxer: bald head, medium-brown skin, thick full black beard, enormous neck and shoulders, cold emotionless stare, black boxing gloves with gold trim held in a tight high guard. Background: regional championship arena, dark crowd silhouettes, colorful banners, spotlight haze. Comic-book style digital painting for a boxing video game fight poster: bold black ink outlines, cel shading, saturated colors, dramatic red rim light from the left and blue rim light from the right, subtle halftone dots. Head-and-shoulders headshot, face centered in a wide 16:9 frame with empty space on both sides, looking straight at the viewer with an intense, serious fighter's stare-down, chin slightly lowered, gloves raised near the chin. Fictional original character. No text, no logos, no watermark.",
+        "presetId": "portrait",
+        "resolution": "1K",
+        "aspectRatio": "16:9",
+        "images": []
+      }
+    },
+    {
+      "id": "portrait-toro",
+      "type": "image",
+      "title": "Headshot \u2014 Fight 4 Marco \"El Toro\" Ruiz",
+      "description": "Production asset: career-ladder headshot for fight 4 (public/portraits/toro.png).",
+      "data": {
+        "prompt": "Aggressive brawler boxer: tan light-brown skin, dark brown mohawk, clean-shaven strong square jaw, flared nostrils, snarling glare like a charging bull, broad muscular shoulders, bright red boxing gloves. Background: packed national championship arena, dark blue stands, bright white spotlights. Comic-book style digital painting for a boxing video game fight poster: bold black ink outlines, cel shading, saturated colors, dramatic red rim light from the left and blue rim light from the right, subtle halftone dots. Head-and-shoulders headshot, face centered in a wide 16:9 frame with empty space on both sides, looking straight at the viewer with an intense, serious fighter's stare-down, chin slightly lowered, gloves raised near the chin. Fictional original character. No text, no logos, no watermark.",
+        "presetId": "portrait",
+        "resolution": "1K",
+        "aspectRatio": "16:9",
+        "images": []
+      }
+    },
+    {
+      "id": "portrait-king",
+      "type": "image",
+      "title": "Headshot \u2014 Fight 5 Jordan \"King\" Hayes",
+      "description": "Production asset: career-ladder headshot for fight 5, the world title (public/portraits/king.png).",
+      "data": {
+        "prompt": "Reigning world champion boxer: deep dark brown skin, short black hair, neat short black beard, powerful athletic build, calm confident deadly stare with chin slightly raised, shiny gold boxing gloves, gold championship belt edge visible. Background: Las Vegas grand arena at night, purple and gold light beams, sparkling camera flashes. Gold and purple rim lights instead of red and blue. Comic-book style digital painting for a boxing video game fight poster: bold black ink outlines, cel shading, saturated colors, dramatic red rim light from the left and blue rim light from the right, subtle halftone dots. Head-and-shoulders headshot, face centered in a wide 16:9 frame with empty space on both sides, looking straight at the viewer with an intense, serious fighter's stare-down, chin slightly lowered, gloves raised near the chin. Fictional original character. No text, no logos, no watermark.",
+        "presetId": "portrait",
+        "resolution": "1K",
+        "aspectRatio": "16:9",
+        "images": []
+      }
+    },
+    {
+      "id": "shot-comic-rusty",
+      "type": "asset",
+      "title": "Comic look \u2014 Fight 1 Rusty Vega",
+      "description": "Screenshot of the current game look for review.",
+      "data": {
+        "assetId": "shot-comic-rusty",
+        "mediaType": "image"
+      }
+    },
+    {
+      "id": "shot-comic-twostep",
+      "type": "asset",
+      "title": "Comic look \u2014 Fight 2 Two-Step",
+      "description": "Screenshot of the current game look for review.",
+      "data": {
+        "assetId": "shot-comic-twostep",
+        "mediaType": "image"
+      }
+    },
+    {
+      "id": "shot-comic-wall",
+      "type": "asset",
+      "title": "Comic look \u2014 Fight 3 The Wall",
+      "description": "Screenshot of the current game look for review.",
+      "data": {
+        "assetId": "shot-comic-wall",
+        "mediaType": "image"
+      }
+    },
+    {
+      "id": "shot-comic-toro",
+      "type": "asset",
+      "title": "Comic look \u2014 Fight 4 El Toro (attacking face)",
+      "description": "Screenshot of the current game look for review.",
+      "data": {
+        "assetId": "shot-comic-toro",
+        "mediaType": "image"
+      }
+    },
+    {
+      "id": "shot-comic-king",
+      "type": "asset",
+      "title": "Comic look \u2014 Fight 5 King",
+      "description": "Screenshot of the current game look for review.",
+      "data": {
+        "assetId": "shot-comic-king",
+        "mediaType": "image"
+      }
+    },
+    {
+      "id": "shot-game-fight",
+      "type": "asset",
+      "title": "Gameplay \u2014 first-person fight vs El Toro (punch lands)",
+      "description": "Gameplay screenshot of the current build.",
+      "data": {
+        "assetId": "shot-game-fight",
+        "mediaType": "image"
+      }
+    },
+    {
+      "id": "shot-game-intro",
+      "type": "asset",
+      "title": "Gameplay \u2014 pre-fight VS screen",
+      "description": "Gameplay screenshot of the current build.",
+      "data": {
+        "assetId": "shot-game-intro",
+        "mediaType": "image"
+      }
+    },
+    {
+      "id": "shot-game-ladder",
+      "type": "asset",
+      "title": "Gameplay \u2014 Road to the Title ladder",
+      "description": "Gameplay screenshot of the current build.",
+      "data": {
+        "assetId": "shot-game-ladder",
+        "mediaType": "image"
+      }
+    },
+    {
+      "id": "shot-arena3",
+      "type": "asset",
+      "title": "Arena 3 \u2014 new Regional gym (shirtless The Wall)",
+      "description": "Gameplay screenshot of the current build.",
+      "data": {
+        "assetId": "shot-arena3",
+        "mediaType": "image"
+      }
+    },
+    {
+      "id": "shot-intro-red",
+      "type": "asset",
+      "title": "Fight intro \u2014 red corner introduction",
+      "description": "Gameplay screenshot of the current build.",
+      "data": {
+        "assetId": "shot-intro-red",
+        "mediaType": "image"
+      }
+    },
+    {
+      "id": "shot-intro-faceoff",
+      "type": "asset",
+      "title": "Fight intro \u2014 face-off and VS panel",
+      "description": "Gameplay screenshot of the current build.",
+      "data": {
+        "assetId": "shot-intro-faceoff",
+        "mediaType": "image"
+      }
+    }
+  ],
+  "edges": [],
+  "id": "628f0f0b-4174-45bf-a2db-dfae812baf64"
+}

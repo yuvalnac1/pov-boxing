@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "prompts": {},
+  "previews": {},
+  "libraryAssets": {
+    "assets/imported/image.png": "430c31d0-72b8-4463-8e70-f124c5b3ecf5",
+    "assets/generated/crop_image-293aca7c-1d9c-4944-ad56-784ad25954e7-cropped.png": "4b89e9c8-9198-43d8-ad0c-a7b6789fed74",
+    "assets/generated/crop_image-3e3da835-37e3-4899-bcb1-2fee41fe6f15-cropped.png": "ba09e577-0fcd-46e0-9e18-d01a6cb6d47f",
+    "assets/generated/crop_image-930b2e5d-e678-474b-a220-57a9c20ca970-cropped.png": "bf9a5372-22de-4d29-ada7-f669f4b5111b",
+    "assets/generated/crop_image-8e000eda-3229-454a-8ec7-de752afdcadd-cropped.png": "555ff839-fd11-4b57-816f-638fd2654a50",
+    "assets/generated/crop_image-ed6b79ca-f22e-40aa-aa39-fb0d8fa3bf85-cropped.png": "574ca5b6-1fd5-4d58-bb08-b39d71a44aa2",
+    "assets/generated/crop_image-9d059724-4b65-4df4-b6c9-f64939b62ca0-cropped.png": "16d8d0e3-107b-4816-8a1f-20876440c4da",
+    "assets/generated/crop_image-1bec9fbb-d857-4531-acd7-36cf87a2c3d4-cropped.png": "9f7b0ca2-5636-4642-812f-15cc0aa7bdb0"
+  },
+  "origins": {
+    "assets/imported/image.png": "uploaded",
+    "assets/generated/crop_image-293aca7c-1d9c-4944-ad56-784ad25954e7-cropped.png": "generated",
+    "assets/generated/crop_image-3e3da835-37e3-4899-bcb1-2fee41fe6f15-cropped.png": "generated",
+    "assets/generated/crop_image-930b2e5d-e678-474b-a220-57a9c20ca970-cropped.png": "generated",
+    "assets/generated/crop_image-8e000eda-3229-454a-8ec7-de752afdcadd-cropped.png": "generated",
+    "assets/generated/crop_image-ed6b79ca-f22e-40aa-aa39-fb0d8fa3bf85-cropped.png": "generated",
+    "assets/generated/crop_image-9d059724-4b65-4df4-b6c9-f64939b62ca0-cropped.png": "generated",
+    "assets/generated/crop_image-1bec9fbb-d857-4531-acd7-36cf87a2c3d4-cropped.png": "generated",
+    "assets/generated/video-strip-6b2bcbf9-b87c-4799-8506-3a0f6b8c68b2.zip": "generated",
+    "assets/generated/video-strip-c50b3b12-0eaf-47ac-8c88-7ab941b86bd3.zip": "generated"
+  },
+  "purposes": {
+    "assets/imported/image.png": "reference",
+    "assets/generated/crop_image-293aca7c-1d9c-4944-ad56-784ad25954e7-cropped.png": "asset",
+    "assets/generated/crop_image-3e3da835-37e3-4899-bcb1-2fee41fe6f15-cropped.png": "asset",
+    "assets/generated/crop_image-930b2e5d-e678-474b-a220-57a9c20ca970-cropped.png": "asset",
+    "assets/generated/crop_image-8e000eda-3229-454a-8ec7-de752afdcadd-cropped.png": "asset",
+    "assets/generated/crop_image-ed6b79ca-f22e-40aa-aa39-fb0d8fa3bf85-cropped.png": "asset",
+    "assets/generated/crop_image-9d059724-4b65-4df4-b6c9-f64939b62ca0-cropped.png": "asset",
+    "assets/generated/crop_image-1bec9fbb-d857-4531-acd7-36cf87a2c3d4-cropped.png": "asset",
+    "assets/generated/video-strip-6b2bcbf9-b87c-4799-8506-3a0f6b8c68b2.zip": "asset",
+    "assets/generated/video-strip-c50b3b12-0eaf-47ac-8c88-7ab941b86bd3.zip": "asset"
+  }
+}

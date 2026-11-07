@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>POV Boxing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+
+  <script type="importmap">
+    { "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+    } }
+  </script>
+  <script type="module" crossorigin src="./assets/main-BTWu8DLc.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/calibration-BY8MdFYG.js">
+  <link rel="stylesheet" crossorigin href="./assets/main-ClUR3LEJ.css">
+</head>
+<body>
+  <canvas id="scene"></canvas>
+  <video id="video" playsinline muted></video>
+
+  <!-- ===== HUD (fight) ===== -->
+  <div id="hud" class="hud" hidden>
+    <div class="bars">
+      <div class="bar-block left">
+        <div class="name" id="hud-pname">YOU</div>
+        <div class="hp"><i id="hud-php"></i><s id="hud-php-lag"></s></div>
+        <div class="sta" title="Stamina"><i id="hud-psta"></i></div>
+        <div class="pips" id="hud-pkd"></div>
+      </div>
+      <div class="clock">
+        <div id="hud-round">ROUND 1</div>
+        <div id="hud-time">1:00</div>
+      </div>
+      <div class="bar-block right">
+        <div class="name" id="hud-oname">OPPONENT</div>
+        <div class="hp"><i id="hud-ohp"></i><s id="hud-ohp-lag"></s></div>
+        <div class="pips" id="hud-okd"></div>
+      </div>
+    </div>
+    <div id="vignette" class="vignette"></div>
+    <div id="banner" class="banner"></div>
+    <div id="move" class="move"></div>
+    <div id="range" class="range">OUT OF REACH — LEAN IN</div>
+    <div class="controls" aria-label="Controls">
+      <div id="ctl-punch" class="ctl"><b>✊</b><span>FIST · HIGH / LOW<br /><em>HEAD / BODY</em></span></div>
+      <div id="ctl-parry" class="ctl"><b>✋</b><span>OPEN HAND<br /><em>PARRY</em></span></div>
+      <div id="ctl-block" class="ctl"><b>🙌</b><span>BOTH UP<br /><em>BLOCK</em></span></div>
+      <div id="ctl-lean" class="ctl"><div class="lean-pad"><i id="lean-dot"></i></div><span>LEAN IN / BACK / SIDE<br /><em>MOVE · DODGE</em></span></div>
+    </div>
+    <div id="popups"></div>
+    <div id="getup" class="getup" hidden>
+      <div class="getup-kd" id="getup-kd"></div>
+      <div class="getup-label">PUNCH WHEN THE MARKER IS IN THE <b>GREEN</b>!</div>
+      <div class="getup-bar"><i id="getup-zone"></i><s id="getup-marker"></s></div>
+      <div class="getup-pips" id="getup-pips"></div>
+    </div>
+    <div id="corner" class="corner" hidden>
+      <div class="corner-title">BETWEEN ROUNDS</div>
+      <div class="corner-coach">🧢 Coach says:</div>
+      <div class="corner-tip" id="corner-tip"></div>
+    </div>
+    <div id="tut" class="tut" hidden>
+      <div class="tut-step" id="tut-step"></div>
+      <div class="tut-title" id="tut-title"></div>
+      <div class="tut-text" id="tut-text"></div>
+      <div class="tut-dots" id="tut-dots"></div>
+      <button id="tut-skip" class="tut-skip">Skip tutorial ›</button>
+    </div>
+    <div class="cam-preview"><div class="cam-label">PLAYER FEED</div><canvas id="cam" width="224" height="168"></canvas></div>
+  </div>
+
+  <!-- ===== Menus ===== -->
+  <section id="screen-title" class="screen title-screen">
+    <div class="logo">POV <span>BOXING</span></div>
+    <p class="tagline">From a basement gym to the world title. Your fists are the controller.</p>
+    <button id="btn-start" class="big">Start camera</button>
+    <p class="fine">Stand about an arm's length from your webcam, in a well-lit room. <a href="tracking-test.html">Tracking test</a></p>
+    <p class="fine" id="dev-help" hidden>DEV: F / J = punch · V / N (or Shift+F / J) = body shot · S / K = parry · hold Space = block · arrows = lean · Space = stop the get-up marker</p>
+  </section>
+
+  <section id="screen-msg" class="screen" hidden>
+    <div class="card">
+      <div class="card-icon" id="msg-icon">🥊</div>
+      <h2 id="msg-title"></h2>
+      <p id="msg-text"></p>
+      <div id="msg-progress" class="progress" hidden><i></i></div>
+      <div id="msg-hands" class="calib-hands" hidden><span id="msg-L">LEFT</span><span id="msg-R">RIGHT</span></div>
+      <button id="msg-btn" class="big" data-hand hidden></button>
+    </div>
+  </section>
+
+  <section id="screen-creator" class="screen creator-screen" hidden>
+    <h2 class="screen-title">CREATE YOUR BOXER</h2>
+    <div class="creator-layout">
+      <div class="creator-panel" id="creator-left"></div>
+      <div class="creator-center">
+        <div class="creator-name" id="creator-name"></div>
+      </div>
+      <div class="creator-panel" id="creator-right"></div>
+    </div>
+    <div class="creator-actions">
+      <button id="btn-random" class="ghost" data-hand>🎲 Randomize</button>
+      <button id="btn-create" class="big" data-hand>Let's go!</button>
+    </div>
+  </section>
+
+  <section id="screen-ladder" class="screen ladder-screen" hidden>
+    <h2 class="screen-title">YOUR ROAD TO THE TITLE</h2>
+    <div class="ladder-boxer" id="ladder-boxer"></div>
+    <div class="ladder-attrs" id="ladder-attrs"></div>
+    <div id="ladder" class="ladder"></div>
+    <div class="ladder-actions">
+      <button id="btn-tutorial" class="ghost" data-hand>Tutorial</button>
+      <button id="btn-edit" class="ghost" data-hand>Edit boxer</button>
+      <button id="btn-recal" class="ghost" data-hand>Recalibrate</button>
+      <button id="btn-reset" class="ghost" data-hand>Reset career</button>
+    </div>
+  </section>
+
+  <section id="screen-intro" class="screen intro-screen" hidden>
+    <div id="intro-title" class="intro-title"></div>
+    <div id="intro-red" class="corner-card red"><small>IN THE RED CORNER</small><b id="intro-red-name"></b><span id="intro-red-sub"></span></div>
+    <div id="intro-blue" class="corner-card blue"><small>IN THE BLUE CORNER</small><b id="intro-blue-name"></b><span id="intro-blue-sub"></span></div>
+    <button id="intro-skip" class="ghost intro-skip" data-hand>Skip intro ›</button>
+    <div class="vs-card" id="vs-card">
+      <div class="vs-fight" id="intro-fight">FIGHT 1 OF 5</div>
+      <div class="vs-row">
+        <div class="vs-side red"><small>IN THE RED CORNER</small><b id="intro-pname">YOU</b><span id="intro-precord">The Rookie</span></div>
+        <div class="vs">VS</div>
+        <div class="vs-side blue"><small>IN THE BLUE CORNER</small><b id="intro-name"></b><span id="intro-tagline"></span></div>
+      </div>
+      <div class="vs-venue" id="intro-venue"></div>
+      <div class="vs-hint">🛡 Raise your guard to start the fight</div>
+      <button id="btn-fight" class="big" data-hand>FIGHT!</button>
+    </div>
+  </section>
+
+  <section id="screen-upgrade" class="screen" hidden>
+    <div class="card upgrade-card">
+      <div class="upgrade-kicker">TRAINING CAMP</div>
+      <h2>CHOOSE YOUR UPGRADE</h2>
+      <p>The win paid off. Pick one thing to train before the next fight. It stays with your boxer for the rest of the career.</p>
+      <div class="upgrades" id="upgrades"></div>
+    </div>
+  </section>
+
+  <section id="screen-result" class="screen" hidden>
+    <div class="card result-card">
+      <div class="newspaper" id="res-paper" hidden>
+        <div class="paper-head">THE DAILY JAB</div>
+        <div class="paper-headline" id="res-headline"></div>
+      </div>
+      <h2 id="res-title"></h2>
+      <p id="res-sub"></p>
+      <div class="stats" id="res-stats"></div>
+      <div class="coach-tip" id="res-tip" hidden></div>
+      <div class="row">
+        <button id="res-primary" class="big" data-hand></button>
+        <button id="res-secondary" class="ghost" data-hand></button>
+      </div>
+    </div>
+  </section>
+
+  <section id="screen-champion" class="screen champion-screen" hidden>
+    <div class="confetti" id="confetti"></div>
+    <h1>WORLD CHAMPION</h1>
+    <div class="champ-bottom">
+      <p id="champ-name">From the basement gym to the top of the world.</p>
+      <div class="stats" id="champ-stats"></div>
+      <button id="btn-again" class="big" data-hand>Play again</button>
+    </div>
+  </section>
+
+  <section id="screen-pause" class="screen" hidden>
+    <div class="card">
+      <div class="card-icon">✋</div>
+      <h2>PAUSED</h2>
+      <p>Show both hands to the camera to keep fighting.</p>
+      <button id="btn-quit" class="ghost" data-hand>Quit to ladder</button>
+    </div>
+  </section>
+
+  <div id="cursor" class="hand-cursor" hidden></div>
+
+</body>
+</html>
